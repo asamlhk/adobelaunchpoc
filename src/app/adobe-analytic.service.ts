@@ -13,7 +13,8 @@ export class AdobeAnalyticService {
     //window.TrackPageView();
     console.log(window['_satellite']);
     window['_satellite'].pageBottom();
-    window.TrackPageView();
+    //window['_satellite'].trackEvent();
+    window['_satellite'].track("TrackPageView")
 
 
     //window['_satellite'].track('trackpageview');
@@ -24,18 +25,19 @@ export class AdobeAnalyticService {
     //console.log(event);
     window['DataLayer'] =
       {
-        'distributortype': 'insert agency or banca channel',
-        'advisorid': 'insert register or login ID stored in SalesForce',
-        'customerid': 'insert customer ID stored in SalesForce',
-        'referralid': 'insert referral ID stored in SalesForce',
-        'goals': 'insert referral ID stored in SalesForce',
-        'ridertype': 'insert rider type protection name selected',
-        'event_category': 'insert event category value',
-        'event_type': 'insert event category value',
+        'distributortype': 'agency',
+        'advisorid': 'sample-agentid',
+        'customerid': 'sample-customerid',
+        'referralid': 'sample-referralid',
+        'goals': 'goal1, goal2, goal3',
+        'ridertype': 'rider1, rider2, rider3',
+        'event_category': 'sample event cate',
+        'event_type': 'sample event type',
         'event_label': event
       }
     console.log('trackevent', window['DataLayer'])
-    window.TrackEvent();
+    window['_satellite'].track("TrackEvent")
+    //window['_satellite'].TrackEvent();
   }
 
 }
