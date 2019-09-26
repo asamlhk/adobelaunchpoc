@@ -9,6 +9,7 @@ import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { AdobeGuardService } from './adobe-guard.service';
 import { AdobeAnalyticService } from './adobe-analytic.service'
+ 
 
 const appRoutes: Routes = [
   { path: 'page1', component: Page1Component, canActivate: [AdobeGuardService], },
@@ -22,7 +23,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
-    )],
+    ),
+ 
+    ],
   declarations: [AppComponent, HelloComponent, Page1Component, Page2Component],
   bootstrap: [AppComponent],
   providers: [AdobeGuardService, AdobeAnalyticService]
