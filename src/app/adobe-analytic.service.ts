@@ -10,6 +10,7 @@ export class AdobeAnalyticService {
     window['DataLayer'] = {
       'pagename': path
     }
+    //window.TrackPageView();
 
 
     window['_satellite'].track('trackpageview');
