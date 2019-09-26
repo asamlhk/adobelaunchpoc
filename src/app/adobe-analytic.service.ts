@@ -11,7 +11,9 @@ export class AdobeAnalyticService {
       'pagename': path
     }
     //window.TrackPageView();
-    console.log(window['_satellite'])
+    console.log(window['_satellite']);
+    window['_satellite'].pageBottom();
+    window.TrackPageView();
 
 
     //window['_satellite'].track('trackpageview');
