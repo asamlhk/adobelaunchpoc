@@ -6,7 +6,7 @@ export class AdobeAnalyticService {
   constructor() { }
 
   public trackPage(path) {
-    //console.log({ 'track': path })
+ 
     window['DataLayer'] = {
       'pagename': path
     }

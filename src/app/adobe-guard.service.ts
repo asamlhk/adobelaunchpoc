@@ -10,7 +10,7 @@ export class AdobeGuardService implements CanActivate {
     let path = data.url[0].path;
     this.adobeSvc.trackPage(path);
 
-    //window._satellite.pageBottom();
+ 
     return true;
   }
 }
